@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capítulo - Cartas ao Universo</title>
+
+  <link rel="stylesheet" href="style/global.css">
+  <link rel="stylesheet" href="style/capitulo.css">
+
+  <!-- Quill CSS -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Simonetta:ital,wght@1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a onclick="history.back()" class="voltar-btn">← Voltar ao Mural</a>
+    <h1 id="chapter-title">Capítulo</h1>
+  </header>
+
+  <main>
+    <!-- Editor -->
+    <section class="editor-section">
+      <h2>Escreva sua carta</h2>
+      <div id="editor"></div>
+      <button id="submit-btn">Enviar Carta</button>
+    </section>
+
+    <!-- Lista de Cartas -->
+    <section class="letters-section">
+      <h2>Cartas dos Leitores</h2>
+      <div id="letters-list" class="letters-list"></div>
+
+      <div class="pagination">
+        <button id="prev-page">Anterior</button>
+        <span id="page-info"></span>
+        <button id="next-page">Próxima</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal (apenas UM) -->
+  <div id="letter-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" id="close-modal">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Quill JS -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+  <!-- Apenas o capitulo.js (firebase é importado dentro dele) -->
+  <script type="module" src="js/capitulo.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Simonetta', serif;
+    background-color: #FBF6FF;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Lavishly Yours', cursive;
+    font-size: 2.5rem;
+    background-color: #A9B8B4;
+    color: white;
+    word-wrap: break-word;
+  }
+  
+  h2 {
+    font-family: 'Simonetta', serif;
+    margin-top: 0;
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      font-size: 1.8rem;
+      padding: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  

@@ -1,0 +1,112 @@
+/* ===============================
+   BASE
+================================ */
+
+body {
+  margin: 0;
+  font-family: 'Simonetta', serif;
+  background-color: #f4f1ec;
+  color: #5a4a42;
+}
+
+/* ===============================
+   HEADER (caso esteja no mural)
+================================ */
+
+header {
+  background-color: #8e9a97; /* verde mais suave */
+  padding: 3rem 0; /* altura reduzida */
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 3rem;
+  color: white;
+  font-weight: normal;
+}
+
+/* ===============================
+   GRID DO MURAL
+================================ */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.8rem;
+  padding: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   CARTÕES (MESES)
+================================ */
+
+.card {
+  background: #e9e3dc;
+  color: #5a4a42;
+  padding: 2rem 1rem;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* Remove sublinhado dos links */
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card a:visited,
+.card a:hover,
+.card a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hover elegante */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  background: #ded6cd;
+}
+
+/* Mês ativo */
+.card.active {
+  background: #c8a24c; /* dourado queimado */
+  color: white;
+}
+
+/* Locked */
+.card.locked {
+  background: #d8d2cb;
+  color: #9b9187;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===============================
+   RESPONSIVO
+================================ */
+
+@media (max-width: 600px) {
+  .cards-container {
+    padding: 2rem 1.2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    font-size: 1rem;
+    padding: 1.5rem 0.8rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+}

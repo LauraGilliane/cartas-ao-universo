@@ -1,0 +1,215 @@
+/* ===============================
+   BASE
+================================ */
+
+body {
+  background: linear-gradient(180deg, #f8f6f2 0%, #efe9e3 100%);
+  font-family: 'Simonetta', serif;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+main {
+  padding: 3rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   EDITOR
+================================ */
+
+.editor-section {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+#editor {
+  background-color: #ffffff;
+  height: 220px;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: none;
+}
+
+#submit-btn {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #6b4c3b, #8a6650);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+#submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* ===============================
+   CARTAS
+================================ */
+/* ===============================
+   LISTA DE CARTAS (VERSÃO LIMPA)
+================================ */
+
+.letters-list {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd5cc;
+}
+
+.letters-list .letter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #e5ded6;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+.letters-list .letter-item:hover {
+  background: rgba(0,0,0,0.02);
+  transform: none;
+}
+
+/* Número e data juntos */
+.letter-info {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #5a4a42;
+}
+
+/* Botão minimalista */
+.letters-list button {
+  background: transparent;
+  border: 1px solid #6b4c3b;
+  color: #6b4c3b;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.letters-list button:hover {
+  background: #6b4c3b;
+  color: white;
+}
+
+/* ===============================
+   PAGINAÇÃO
+================================ */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.pagination button {
+  border: none;
+  background: #e6ded6;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background: #d8cfc7;
+}
+
+/* ===============================
+   MODAL
+================================ */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 650px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-content .close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b4c3b;
+}
+
+#modal-body {
+  font-family: 'Simonetta', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* ===============================
+   BOTÃO VOLTAR
+================================ */
+
+.voltar-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 0.6rem 1.2rem;
+  font-family: 'Simonetta', serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background-color: #ffffffcc;
+  color: #6b4c3b;
+  border: 1px solid #6b4c3b;
+  border-radius: 30px;
+  z-index: 1000;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.voltar-btn:hover {
+  background-color: #6b4c3b;
+  color: #fff;
+}
